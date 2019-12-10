@@ -118,6 +118,8 @@ app.on("activate", () => {
     if (mainWindow === null) {
         createWindow();
     }
+    
+    app.disableHardwareAcceleration();
 });
 
 ipcMain.on("toggleDevTools", () => { mainWindow.toggleDevTools(); });
